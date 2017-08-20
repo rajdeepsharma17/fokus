@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="zero">0dp</dimen>
+
+    <dimen name="main_tile_label_text_size">16sp</dimen>
+    <dimen name="main_tile_label_padding">10dp</dimen>
+
+</resources>

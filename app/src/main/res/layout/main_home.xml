@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- starts at starting -->
+    <android.support.constraint.Guideline
+        android:id="@+id/main_home_v_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <!-- used for having a left margin -->
+    <android.support.constraint.Guideline
+        android:id="@+id/main_home_v_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- used for having a right margin -->
+    <android.support.constraint.Guideline
+        android:id="@+id/main_home_v_95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <!-- half (50%) horiz -->
+    <android.support.constraint.Guideline
+        android:id="@+id/main_home_h_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- ends at ending horizontal -->
+    <android.support.constraint.Guideline
+        android:id="@+id/main_home_h_100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <!-- Dual Spacers -->
+    <io.ksdme.fokus.SquareLayout
+        android:id="@+id/main_home_tile_top_spacer"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@id/main_home_v_0"
+        app:layout_constraintRight_toLeftOf="@id/main_home_v_5"
+        app:layout_constraintTop_toBottomOf="@id/main_home_h_50">
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </io.ksdme.fokus.SquareLayout>
+
+    <io.ksdme.fokus.SquareLayout
+        android:id="@+id/main_home_tile_bottom_spacer"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/main_home_h_100"
+        app:layout_constraintLeft_toRightOf="@id/main_home_v_0"
+        app:layout_constraintRight_toLeftOf="@id/main_home_v_5">
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </io.ksdme.fokus.SquareLayout>
+
+    <include
+        layout="@layout/main_tile"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
+        app:layout_constraintBottom_toTopOf="@id/main_home_tile_bottom_spacer"
+        app:layout_constraintLeft_toRightOf="@id/main_home_v_5"
+        app:layout_constraintRight_toLeftOf="@id/main_home_v_95"
+        app:layout_constraintTop_toBottomOf="@id/main_home_tile_top_spacer" />
+
+</android.support.constraint.ConstraintLayout>
